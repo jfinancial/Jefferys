@@ -1,6 +1,5 @@
 package com.discovery.epp.ddx.jefferys.function;
 
-import com.discovery.epp.ddx.jefferys.function.PropertiesToMap;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

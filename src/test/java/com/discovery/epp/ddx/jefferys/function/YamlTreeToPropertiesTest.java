@@ -1,10 +1,6 @@
 package com.discovery.epp.ddx.jefferys.function;
 
-import com.discovery.epp.ddx.jefferys.function.PropertiesToMap;
-import com.discovery.epp.ddx.jefferys.function.YamlClasspathLoader;
-import com.discovery.epp.ddx.jefferys.function.YamlTreeToProperties;
 import org.junit.jupiter.api.Test;
-
 
 import static org.assertj.core.api.Assertions.assertThat;
 class YamlTreeToPropertiesTest {
