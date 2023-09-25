@@ -1,8 +1,11 @@
 package com.discovery.epp.ddx.jefferys.function;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+
+@DisplayName("Test converting Yaml to properties")
 class YamlTreeToPropertiesTest {
 
     @Test

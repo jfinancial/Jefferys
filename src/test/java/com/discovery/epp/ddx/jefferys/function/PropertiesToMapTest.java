@@ -1,11 +1,13 @@
 package com.discovery.epp.ddx.jefferys.function;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@DisplayName("Test converting a properties file to map")
 class PropertiesToMapTest {
 
     @Test

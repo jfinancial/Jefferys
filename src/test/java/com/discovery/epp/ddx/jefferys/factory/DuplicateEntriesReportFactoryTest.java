@@ -5,6 +5,7 @@ import com.discovery.epp.ddx.jefferys.domain.YamlFile;
 import com.discovery.epp.ddx.jefferys.function.PropertiesToMap;
 import org.assertj.core.util.Lists;
 import org.assertj.core.util.Sets;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -14,6 +15,7 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 
+@DisplayName("Test generating a DuplicateEntriesReport")
 class DuplicateEntriesReportFactoryTest {
 
     @Test

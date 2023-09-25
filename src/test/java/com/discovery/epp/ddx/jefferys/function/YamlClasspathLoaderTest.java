@@ -6,7 +6,7 @@ import org.yaml.snakeyaml.Yaml;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@DisplayName("Write assertions parsing YAML")
+@DisplayName("Write assertions or parsing YAML")
 class YamlClasspathLoaderTest {
 
 
