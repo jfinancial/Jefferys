@@ -13,18 +13,13 @@ public class PropertiesToMap implements Function<String, Map<String,String>> {
     public Map<String, String> apply(@NonNull String s) {
         var result = new HashMap<String,String>();
         var inputStream = new ClasspathResourceToIInputStream().apply(s);
-        new ReadFromInputStream().apply(inputStream).stream().forEach(
-                l -> {
-                    var keyValue = l.split("=");
-                    result.put(keyValue[0].trim(),keyValue[1].trim());
-                }
-        );
+        new ReadFromInputStream().apply(inputStream).stream().forEach(l -> populateMap(result, l));
         return result;
-
     }
 
-
-
-
+    private void populateMap(Map<String, String> result, String l) {
+        var keyValue = l.split("=");
+        result.put(keyValue[0].trim(),keyValue[1].trim());
+    }
 
 }

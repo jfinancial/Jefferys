@@ -14,5 +14,4 @@ public class YamlClasspathLoader implements Function<String, Map<String,?>> {
         return new Yaml().load(new ClasspathResourceToIInputStream().apply(resource));
     }
 
-
 }

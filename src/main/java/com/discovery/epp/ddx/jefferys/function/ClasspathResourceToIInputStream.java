@@ -13,13 +13,11 @@ public class ClasspathResourceToIInputStream implements Function<String,InputStr
     }
 
     private InputStream resourceAsStream(String resource) {
-        var inputStream = this.getClass().getClassLoader()
-                .getResourceAsStream(resource);
+        var inputStream = this.getClass().getClassLoader().getResourceAsStream(resource);
         if(inputStream == null){
             throw new IllegalArgumentException("Unable to find "+resource+" on classpath");
         }
         return inputStream;
     }
-
 
 }
