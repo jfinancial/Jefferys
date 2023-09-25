@@ -1,0 +1,25 @@
+refreshment:
+  breakfast:
+    type: "black"
+    beverage: "tea"
+    sugar:
+      teaspoons: 1
+  evening:
+    type: "red"
+    beverage: "wine"
+snacks:
+  evening:
+    name: "pistachios"
+
+
+party:
+  guests:
+    - name: Jack
+      age: 25
+      gender: male
+    - name: Jane
+      age: 32
+      gender: female
+    - name: Tom
+      age: 52
+      gender: male

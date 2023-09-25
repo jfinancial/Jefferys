@@ -1,0 +1,11 @@
+refreshment:
+  breakfast:
+    type: "green"
+    beverage: "tea"
+    sugar:
+      teaspoons: 0
+  midmorning:
+    type: "caramel"
+    beverage: "latte"
+    sugar:
+      teaspoons: 1
