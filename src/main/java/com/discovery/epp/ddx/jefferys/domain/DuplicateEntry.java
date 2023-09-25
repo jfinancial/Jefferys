@@ -2,14 +2,13 @@ package com.discovery.epp.ddx.jefferys.domain;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.Iterables;
-import lombok.Builder;
+
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 
 @EqualsAndHashCode
@@ -25,10 +24,11 @@ public class DuplicateEntry {
     }
 
     @VisibleForTesting
-    public DuplicateEntry(String key, List<String> filenames, List<String> values) {
+    public DuplicateEntry(String key, List<String> filenames, List<String> values, boolean duplicateValues) {
         this.key = key;
         this.filenames = filenames;
         this.values = values;
+        this.duplicateValues = duplicateValues;
     }
 
     private final String key;
@@ -36,8 +36,13 @@ public class DuplicateEntry {
 
     private final List<String> values;
 
+    private boolean duplicateValues = false;
+
     public void addFileNameAndValue(@NonNull String filename, @NonNull String value){
         filenames.add(filename);
+        if(values.contains(value)){
+            this.duplicateValues = true;
+        }
         values.add(value);
     }
 
@@ -48,4 +53,5 @@ public class DuplicateEntry {
     public String getOverriddenValue(){
         return Iterables.getLast(values);
     }
+
 }

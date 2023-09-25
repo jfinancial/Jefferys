@@ -40,19 +40,19 @@ class DuplicateEntriesReportFactoryTest {
 
         var filenames = Lists.newArrayList("example1.properties","example2.properties");
         assertThat(report.duplicates().get("refreshment.breakfast.type")).isEqualTo(
-                new DuplicateEntry("refreshment.breakfast.type", filenames, Lists.newArrayList("green","black"))
+                new DuplicateEntry("refreshment.breakfast.type", filenames, Lists.newArrayList("green","black"), false)
         );
         assertThat(report.duplicates().get("refreshment.midmorning.type")).isEqualTo(
-                new DuplicateEntry("refreshment.midmorning.type", filenames, Lists.newArrayList("caramel","caramel"))
+                new DuplicateEntry("refreshment.midmorning.type", filenames, Lists.newArrayList("caramel","caramel"), true)
         );
         assertThat(report.duplicates().get("refreshment.breakfast.sugar.teaspoons")).isEqualTo(
-                new DuplicateEntry("refreshment.breakfast.sugar.teaspoons", filenames, Lists.newArrayList("0","2"))
+                new DuplicateEntry("refreshment.breakfast.sugar.teaspoons", filenames, Lists.newArrayList("0","2"), false)
         );
         assertThat(report.duplicates().get("refreshment.midmorning.sugar.teaspoons")).isEqualTo(
-                new DuplicateEntry("refreshment.midmorning.sugar.teaspoons", filenames, Lists.newArrayList("1","0"))
+                new DuplicateEntry("refreshment.midmorning.sugar.teaspoons", filenames, Lists.newArrayList("1","0"), false)
         );
         assertThat(report.duplicates().get("refreshment.breakfast.beverage")).isEqualTo(
-                new DuplicateEntry("refreshment.breakfast.beverage", filenames, Lists.newArrayList("tea","coffee"))
+                new DuplicateEntry("refreshment.breakfast.beverage", filenames, Lists.newArrayList("tea","coffee"), false)
         );
     }
 
